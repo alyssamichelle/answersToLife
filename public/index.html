@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="answersToLife">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Questions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/semantic_ui/semantic.css" />
+  </head>
+
+  <body ng-controller="QuestionsController">
+    <div class="ui segment">
+      <h1 class="ui header">Answers to Life</h1>
+
+      <div class="ui fluid action input">
+        <input type="text" placeholder="Search...">
+        <div class="ui button">Search</div>
+      </div>
+    </div>
+    
+    <div class="ui segment">
+      <h3 class="ui header">{{Question}}</h3>
+      <div class="content">
+        Answer
+      </div>
+    </div>
+    
+    <div class="ui segment">
+      <h3 class="ui header">The purpose</h3>
+      <div class="content">
+        The purpose of this website is to give glory and honor to the LORD of LORD’s and the King of Kings, Jesus Christ. There is no organized religious connection and no denomination affiliation with this web site or any of its content. The singular reason for this site is to give correct and truthful answers to questions we all have in life. Also, simply for a consistent reference point we will be using the Scofield NIV bible. cross-references will be through the king James, new King James and the Torah. Along with some Greek, Hebrew and Latin translations of words and word types. We hope and pray as you seek answers in your life that God would draw you close to himself through the grace and truth of his son Jesus Christ.
+      </div>
+    </div>
+
+      <div class="ui segment">
+        <h4 class="ui header">About our Author</h4>
+      </div>
+    </div>
+  
+      <h2 class="ui header">Unanswered as of yet</h2>
+    <div class="ui cards">
+
+      <div class="card" ng-repeat="question in unansweredQuestions">
+        <div class="content">
+
+          <div class="header">
+            <i class="comment icon ui avatar"></i>
+            {{question | ellipses:true:29:'...'}}
+          </div>
+
+          <div class="description">{{question}}</div>
+
+          <div class="ui bottom attached labeled icon button" title="Vote on this question.">Answer this next, please! <i class="checkmark icon" ></i>
+          </div>
+
+        </div>
+      </div>  
+
+    </div>
+
+    </div>
+    <!-- Load Js libs -->
+    <script src="./js/app.js"></script>
+    <script src="./js/vendor/jquery.js"></script>
+    <script src="./js/vendor/angular.js"></script>
+    <script src="css/semantic_ui/semantic.min.js"></script>
+    
+    <!-- Controllers -->
+    <script src="./js/controllers/questions.js"></script>
+    
+    <!-- Filters -->
+    <script src="./js/filters/ellipses.js"></script>
+    
+
+  </body>
+</html>

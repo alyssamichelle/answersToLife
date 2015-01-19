@@ -1,4 +1,9 @@
 angular.module('answersToLife')
+
+// TO DO
+// Add data to firebase
+// Make server calls to get this data https://answerstolife.firebaseio.com/
+
 .controller('QuestionsController',['$scope', function($scope){
   console.log('Running in values controller')
   // Temporary Inline Controller to Fake Getting Data
@@ -17,7 +22,7 @@ angular.module('answersToLife')
     "What is marriage and why get married?",
     "What is the meaning of life?",
     "What does heaven look like?"];
-  
+
     console.log('Running in values controller', $scope)
-  
+
 }]);

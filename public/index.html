@@ -5,24 +5,26 @@
     <meta charset="utf-8">
     <title>Questions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/semantic_ui/semantic.css" />
+    <link rel="stylesheet" href="css/app.css" />
   </head>
 
-  <body ng-controller="QuestionsController">
-    <div class="ui segment">
-      <h1 class="ui header">Answers to Life</h1>
+  <body ng-controller="AnswersController">
+    <div class="main container">
+      <header>
+        <h1 class="ui header">Answers to Life</h1>
+        <div class="ui three item purple menu">
+          <a class="active item" href="">Articles</a>
+          <a class="item" href="">Questions</a>
+          <a class="item" href="">About</a>
+        </div>
+        <div class="ui fluid action input">
+          <input type="text" placeholder="Search...">
+          <div class="ui purple button">Search</div>
+        </div>
+      </header>
 
-      <div class="ui fluid action input">
-        <input type="text" placeholder="Search...">
-        <div class="ui button">Search</div>
-      </div>
-    </div>
-
-    <div class="ui segment">
-      <h3 class="ui header">{{Question}}</h3>
-      <div class="content">
-        Answer
-      </div>
+    <div ng-repeat="answer in answers" >
+      <atl-answer title="answer.title" content="answer.content" alt-content="answer.altContent"></atl-answer>
     </div>
 
     <div class="ui segment">
@@ -37,8 +39,8 @@
       </div>
     </div>
 
-      <h2 class="ui header">Unanswered as of yet</h2>
-    <div class="ui cards">
+    <h2 class="ui header">Unanswered as of yet</h2>
+    <div class="ui cards" ng-controller="QuestionsController">
 
       <div class="card" ng-repeat="question in unansweredQuestions">
         <div class="content">
@@ -58,22 +60,30 @@
 
     </div>
 
+<!-- </div> -->
+
+      <!-- Load Js libs -->
+      <script src="js/vendor/jquery.js"></script>
+      <script src="js/vendor/markdown/marked.js"></script>
+      <script src="js/vendor/angular.js"></script>
+      <script src="js/vendor/angular-resource.js"></script>
+      <script src="js/vendor/markdown/angular-md.js"></script>
+      <script src="vendor/semantic_ui/semantic.js"></script>
+
+      <!-- Load NgApp -->
+      <script src="js/app.js"></script>
+
+      <!-- Controllers -->
+      <script src="js/controllers/questions.js"></script>
+      <script src="atl-answer/controller.js"></script>
+
+      <!-- Filters -->
+      <script src="js/filters/ellipses.js"></script>
+
+      <!-- Answers -->
+      <script src="atl-answer/service.js"></script>
+      <script src="atl-answer/directive.js"></script>
+
     </div>
-
-    <!-- Load Js libs -->
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/angular.js"></script>
-    <script src="css/semantic_ui/semantic.min.js"></script>
-
-    <!-- Load NgApp -->
-    <script src="js/app.js"></script>
-
-    <!-- Controllers -->
-    <script src="js/controllers/questions.js"></script>
-
-    <!-- Filters -->
-    <script src="js/filters/ellipses.js"></script>
-
-
   </body>
 </html>

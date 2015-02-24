@@ -4,8 +4,7 @@ angular.module('answersToLife')
 // Add data to firebase
 // Make server calls to get this data https://answerstolife.firebaseio.com/
 
-.controller('QuestionsController',['$scope', function($scope){
-  console.log('Running in values controller')
+.controller('QuestionsController',['$scope', 'Answers', function($scope, Answers){
   // Temporary Inline Controller to Fake Getting Data
   $scope.unansweredQuestions =
     ["How old is the Earth?",
@@ -23,6 +22,5 @@ angular.module('answersToLife')
     "What is the meaning of life?",
     "What does heaven look like?"];
 
-    console.log('Running in values controller', $scope)
 
 }]);

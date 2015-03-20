@@ -1,5 +1,6 @@
 angular.module('answersToLife')
-.factory('Answers', ['$http', function AnswersFactory($http){
+.factory('Answers', function AnswersFactory($http){
+  // return $.Deferred();
   return $http.get('https://answerstolife.firebaseio.com/answers.json');
   // return $http.get('http://theanswerstolife.tumblr.com/api/read/json');
 
@@ -7,4 +8,4 @@ angular.module('answersToLife')
   // var apiKey = 'Lg3fEupJ8ULRAlUxHS0G2Hev1cYgKZUOKCjRxCO2qVNxO05EmI';
   // return $http.get('http://api.tumblr.com/v2/blog/theanswerstolife.tumblr.com/posts?api_key='+ apiKey);
 
-}]);
+});

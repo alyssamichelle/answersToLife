@@ -1,8 +1,9 @@
 angular.module('answersToLife')
-.controller('AnswersController', ['Answers','$scope', function(Answers, $scope, AccessToken){
+.controller('AnswersController',function(Answers, $scope){
 
   Answers.success(function(data){
     $scope.answers = data;
+    console.log(data);
   });
 
-}]);
+});

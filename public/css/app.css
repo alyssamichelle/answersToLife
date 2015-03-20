@@ -1,4 +1,19 @@
 @import url(../vendor/semantic_ui/semantic.css);
+
+@-webkit-keyframes wiggle-it {
+  0% {
+    /*transform:rotate(0deg);*/
+    /*color: #fff;*/
+  }
+  50% {
+    transform: rotate(-1deg)
+  }
+  100% {
+    transform:rotate(1deg);
+    /*color: #f06d06;*/
+  }
+}
+
 body {
   max-width: 700px;
   margin: 50px auto; }
@@ -11,3 +26,21 @@ body {
     line-height: 1.5em; }
 
 /*# sourceMappingURL=app.css.map */
+
+.container {
+  margin: 25px 0 50px;
+}
+
+
+/*Playing with CSS ANIMATIONS*/
+
+/*How can I make the psuedoe .item before element disappear on a hover?*/
+.ui.purple.button:hover, a:hover {
+  /*background-color: #cce2ff;
+  transition: all 2s ease 0;
+  transform:rotate(1deg);*/
+
+  -webkit-animation: wiggle-it 250ms linear 0s infinite alternate;
+  background: none !important;
+  box-shadow: none !important;
+}

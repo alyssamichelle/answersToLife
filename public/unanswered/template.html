@@ -1,0 +1,20 @@
+<h2 class="ui header">Unanswered as of yet</h2>
+<div class="ui cards" ng-controller="QuestionsController">
+
+  <div class="card" ng-repeat="question in unansweredQuestions">
+    <div class="content">
+
+      <div class="header">
+        <i class="comment icon ui avatar"></i>
+        {{question | ellipses:true:29:'...'}}
+      </div>
+
+      <div class="description">{{question}}</div>
+
+      <div class="ui bottom attached labeled icon button" title="Vote on this question.">Answer this next, please! <i class="checkmark icon" ></i>
+      </div>
+
+    </div>
+  </div>
+
+</div>

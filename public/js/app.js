@@ -6,8 +6,12 @@ angular.module('answersToLife', ['ngResource', 'yaru22.directives.md', 'ngRoute'
     redirectTo: '/answers'
   })
   .when('/answers',{
-    templateUrl: '/answer/template.html',
+    templateUrl: '/answer/answers.html',
     controller: 'AnswersController'
+  })
+  .when('/answers/:id',{
+    templateUrl: '/answer/answer.html',
+    controller: 'AnswerController'
   })
   .when('/alt-content',{
     templateUrl: '/answer/alt-content.html'
@@ -17,7 +21,6 @@ angular.module('answersToLife', ['ngResource', 'yaru22.directives.md', 'ngRoute'
     controller: 'UnansweredController'
   })
   .when('/about',{
-    templateUrl: '/about/template.html',
-    controller: 'AboutController'
+    templateUrl: '/about/template.html'
   });
 });

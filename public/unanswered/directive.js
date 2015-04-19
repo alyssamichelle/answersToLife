@@ -3,9 +3,6 @@ angular.module('answersToLife')
   return {
     restrict: 'E',
     templateUrl: 'unanswered/template.html',
-    link: function(scope){
-
-    },
     scope:{
       unansweredQuestions: '='
     }

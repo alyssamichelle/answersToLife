@@ -1,11 +1,15 @@
+// Attatching all to the main application module
 angular.module('answersToLife')
+
+// Answers Factory in charge of GETting all Answers
 .factory('Answers', function AnswersFactory($http){
-  // return $.Deferred();
   return $http.get('https://answerstolife.firebaseio.com/answers.json');
-  // return $http.get('http://theanswerstolife.tumblr.com/api/read/json');
-
-  // try and fig out why this is not working, oath?
-  // var apiKey = 'Lg3fEupJ8ULRAlUxHS0G2Hev1cYgKZUOKCjRxCO2qVNxO05EmI';
-  // return $http.get('http://api.tumblr.com/v2/blog/theanswerstolife.tumblr.com/posts?api_key='+ apiKey);
-
-});
+})
+// Answer Factory in charge of GETting a single Answer
+// .factory('Answer', function AnswersFactory($http, $scope, $routeParams){
+//   return
+//   $scope.answerId = $routeParams.id;
+//   // console.log($routeParams)
+//   // return $scope.answers[$routeParams.id];
+//   // return $http.get('https://answerstolife.firebaseio.com/answers/'+ $routeParams.id +'.json');
+// })

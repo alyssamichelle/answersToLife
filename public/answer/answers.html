@@ -1,0 +1,19 @@
+<h2 class="ui header">Other Answers</h2>
+<div class="ui cards" >
+
+  <div class="card" ng-repeat="answer in answers">
+    <div class="content">
+
+      <div class="header">
+        <i class="comment icon ui avatar"></i>
+        {{answer.title | ellipses:true:29:'...'}}
+      </div>
+
+      <div class="description">{{answer.question}}</div>
+
+      <a class="ui button attached" href="#/answers/{{$index}}">Find Out</a>
+
+    </div>
+  </div>
+
+</div>

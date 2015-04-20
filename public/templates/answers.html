@@ -1,4 +1,10 @@
-<h2 class="ui header">Other Answers</h2>
+<div class="ui fluid action input breathing-room">
+  <input type="text" placeholder="Search...">
+  <div class="ui purple button">Search</div>
+</div>
+
+<h2 class="ui header">Answers</h2>
+
 <div class="ui cards" >
 
   <div class="card" ng-repeat="answer in answers">
@@ -11,7 +17,7 @@
 
       <div class="description">{{answer.question}}</div>
 
-      <a class="ui button attached" href="#/answers/{{$index}}">Find Out</a>
+      <a class="ui button attached find-out" href="#/answers/{{$index}}">Find Out</a>
 
     </div>
   </div>

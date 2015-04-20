@@ -16,7 +16,10 @@
 
 body {
   max-width: 700px;
-  margin: 50px auto !important; }
+  margin: 50px auto !important;
+  font-size: 115% !important;
+}
+
 
 .article {
   margin: 25px 0 50px; }
@@ -58,4 +61,23 @@ body {
 .votes {
   position: absolute;
   top: 32%;
+}
+
+/*Styling Glamorous Photo on About Pg*/
+
+.bio-pic {
+  margin: 20px auto;
+}
+
+/*Styling Find Out Button on Answers pg*/
+
+.find-out, .search-bar {
+  margin-top: 5px !important;
+}
+
+
+/*Giving some elements margin top*/
+
+.breathing-room {
+  margin-top: 15px !important;
 }

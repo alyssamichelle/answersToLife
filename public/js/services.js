@@ -5,11 +5,7 @@ angular.module('answersToLife')
 .factory('Answers', function AnswersFactory($http){
   return $http.get('https://answerstolife.firebaseio.com/answers.json');
 })
-// Answer Factory in charge of GETting a single Answer
-// .factory('Answer', function AnswersFactory($http, $scope, $routeParams){
-//   return
-//   $scope.answerId = $routeParams.id;
-//   // console.log($routeParams)
-//   // return $scope.answers[$routeParams.id];
-//   // return $http.get('https://answerstolife.firebaseio.com/answers/'+ $routeParams.id +'.json');
-// })
+
+.factory('Question', function QuestionsFactory($http){
+  return $http.get('https://answerstolife.firebaseio.com/questions.json');
+});

@@ -22,4 +22,18 @@ angular.module('answersToLife')
     });
   };
 
+})
+
+// Questions Controller
+.controller('QuestionsController',function(Question, $scope){
+
+  Question.success(function(data){
+    $scope.unansweredQuestions = data;
+  });
+  // 
+  // $scope.votes = 0;
+  //
+  // $scope.vote = function(){
+  //   $scope.votes++;
+  // }
 });

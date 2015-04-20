@@ -44,3 +44,18 @@ body {
   background: none !important;
   box-shadow: none !important;
 }
+
+/*Styling the number of votes*/
+
+.ui.labeled.icon.buttons > .button > .icon, .ui.labeled.icon.button > .icon {
+  width: 3.5em !important;
+}
+/*Moving the icon left*/
+.ui.labeled.icon.button > .icon:before {
+  width: 50% !important;
+}
+
+.votes {
+  position: absolute;
+  top: 32%;
+}

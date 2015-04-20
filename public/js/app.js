@@ -6,21 +6,21 @@ angular.module('answersToLife', ['ngResource', 'yaru22.directives.md', 'ngRoute'
     redirectTo: '/answers'
   })
   .when('/answers',{
-    templateUrl: '/answer/answers.html',
+    templateUrl: '/templates/answers.html',
     controller: 'AnswersController'
   })
   .when('/answers/:id',{
-    templateUrl: '/answer/answer.html',
+    templateUrl: '/templates/answer.html',
     controller: 'AnswerController'
   })
   .when('/alt-content',{
-    templateUrl: '/answer/alt-content.html'
+    templateUrl: '/templates/alt-content.html'
   })
   .when('/unanswered',{
-    templateUrl: '/unanswered/template.html',
+    templateUrl: '/templates/questions.html',
     controller: 'UnansweredController'
   })
   .when('/about',{
-    templateUrl: '/about/template.html'
+    templateUrl: '/templates/about.html'
   });
 });

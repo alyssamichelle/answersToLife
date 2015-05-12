@@ -8,9 +8,10 @@
 
 - `cd` into answersToLife directory
 
-- start rails server `rails s`
+- start server `rackup`
 
- - view site at `http://0.0.0.0:3000` in browser
+ - view site at `http://localhost:9292/` in browser
+
 
 ## Firebase Data
 

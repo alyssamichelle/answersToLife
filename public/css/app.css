@@ -17,7 +17,7 @@
 body {
   max-width: 700px;
   margin: 50px auto !important;
-  font-size: 115% !important;
+  font-size: 120% !important;
 }
 
 
@@ -65,8 +65,10 @@ body {
 
 /*Styling Glamorous Photo on About Pg*/
 
-.bio-pic {
-  margin: 20px auto;
+img.bio-pic.image{
+  margin: 1.7em 2em 1em 0;
+  max-width: 250px;
+  float: left;
 }
 
 /*Styling Find Out Button on Answers pg*/

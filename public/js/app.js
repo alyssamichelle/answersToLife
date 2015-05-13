@@ -21,6 +21,7 @@ angular.module('answersToLife', ['ngResource', 'yaru22.directives.md', 'ngRoute'
     controller: 'QuestionsController'
   })
   .when('/about',{
-    templateUrl: '/templates/about.html'
+    templateUrl: '/templates/about.html',
+    controller: 'AboutController'
   });
 });

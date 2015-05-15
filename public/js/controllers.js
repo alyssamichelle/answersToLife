@@ -1,5 +1,5 @@
 angular.module('answersToLife')
-.controller('AnswersController',function(Answers, $scope){
+.controller('AnswersController', function(Answers, $scope) {
   $('.ui.menu .item').removeClass('active');
   $('.ui.menu .answers.item').addClass('active');
 // Multiple Answers Controller
@@ -11,7 +11,7 @@ angular.module('answersToLife')
 })
 
 // Single Answer Controller
-.controller('AnswerController',function(Answers,$scope, $routeParams){
+.controller('AnswerController', function(Answers,$scope, $routeParams) {
   $('.ui.menu .item').removeClass('active');
   $('.ui.menu .answers.item').addClass('active');
 
@@ -28,7 +28,7 @@ angular.module('answersToLife')
 })
 
 // Questions Controller
-.controller('QuestionsController',function(Question, $scope){
+.controller('QuestionsController', function(Question, $scope) {
   $('.ui.menu .item').removeClass('active');
   $('.ui.menu .questions.item').addClass('active');
 
@@ -41,4 +41,15 @@ angular.module('answersToLife')
   // $scope.vote = function(){
   //   $scope.votes++;
   // }
+})
+
+// About Controller
+.controller('AboutController', function() {
+  $('.ui.menu .item').removeClass('active');
+  $('.ui.menu .about.item').addClass('active');
 });
+
+// Decided to let each route handle this functionality
+// This way on nav click, or manual page url type in, the nav buttons will respond properly
+
+//add one for about pg

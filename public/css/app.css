@@ -2,15 +2,49 @@
 
 @-webkit-keyframes wiggle-it {
   0% {
-    /*transform:rotate(0deg);*/
-    /*color: #fff;*/
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
   50% {
-    transform: rotate(-1deg)
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
   }
   100% {
-    transform:rotate(1deg);
-    /*color: #f06d06;*/
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+  }
+}
+
+@keyframes wiggle-it {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+  100% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+  }
+}
+
+@-webkit-keyframes color-change {
+  0% {
+    color: #3C3C3C;
+  }
+  100% {
+    color: #92539E;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    color: #3C3C3C;
+  }
+  100% {
+    color: #92539E;
   }
 }
 
@@ -37,17 +71,17 @@ body {
 
 /*Playing with CSS ANIMATIONS*/
 
-/*How can I make the psuedoe .item before element disappear on a hover?*/
-.ui.purple.button:hover, a:hover {
-  /*background-color: #cce2ff;
-  transition: all 2s ease 0;
-  transform:rotate(1deg);*/
+a.item:hover:not(.button) {
+  transition: transform 2s ease;
 
-  -webkit-animation: wiggle-it 250ms linear 0s infinite alternate;
-  background: none !important;
-  box-shadow: none !important;
+  -webkit-animation: wiggle-it 250ms linear 0s infinite alternate, color-change 250ms infinite alternate;
+          animation: wiggle-it 250ms linear 0s infinite alternate, color-change 250ms infinite alternate;
 }
 
+.button:hover .anchor-text, .anchor-text:hover {
+  -webkit-animation: wiggle-it 250ms linear 0s infinite alternate;
+          animation: wiggle-it 250ms linear 0s infinite alternate;
+}
 /*Styling the number of votes*/
 
 .ui.labeled.icon.buttons > .button > .icon, .ui.labeled.icon.button > .icon {

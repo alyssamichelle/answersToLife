@@ -62,10 +62,8 @@ body {
     font-family: Baskerville, serif;
     line-height: 1.5em; }
 
-/*# sourceMappingURL=app.css.map */
-
 .container {
-  margin: 25px 0 50px;
+  margin: 25px 30px 50px;
 }
 
 
@@ -74,13 +72,13 @@ body {
 a.item:hover:not(.button) {
   transition: transform 2s ease;
 
-  -webkit-animation: wiggle-it 250ms linear 0s infinite alternate, color-change 250ms infinite alternate;
-          animation: wiggle-it 250ms linear 0s infinite alternate, color-change 250ms infinite alternate;
+  -webkit-animation: wiggle-it 250ms linear 0s 1 alternate, color-change 250ms 1 alternate;
+          animation: wiggle-it 250ms linear 0s 1 alternate, color-change 250ms 1 alternate;
 }
 
 .button:hover .anchor-text, .anchor-text:hover {
-  -webkit-animation: wiggle-it 250ms linear 0s infinite alternate;
-          animation: wiggle-it 250ms linear 0s infinite alternate;
+  -webkit-animation: wiggle-it 250ms linear 0s 1 alternate;
+          animation: wiggle-it 250ms linear 0s 1 alternate;
 }
 /*Styling the number of votes*/
 
@@ -116,4 +114,17 @@ img.bio-pic.image{
 
 .breathing-room {
   margin-top: 15px !important;
+}
+
+/* Flexbox Anyone? */
+/* These styles will make the cards GROW to fill the full width of their container. */
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex-grow: 1;
 }

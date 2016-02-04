@@ -70,7 +70,8 @@ body {
 /*Playing with CSS ANIMATIONS*/
 
 a.item:hover:not(.button) {
-  transition: transform 2s ease;
+  -webkit-transition: -webkit-transform 2s ease;
+          transition: transform 2s ease;
 
   -webkit-animation: wiggle-it 250ms linear 0s 1 alternate, color-change 250ms 1 alternate;
           animation: wiggle-it 250ms linear 0s 1 alternate, color-change 250ms 1 alternate;
@@ -120,11 +121,22 @@ img.bio-pic.image{
 /* These styles will make the cards GROW to fill the full width of their container. */
 
 .cards {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 .card {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }

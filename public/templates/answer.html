@@ -1,6 +1,10 @@
 <div class="article">
-  <!-- <a class="ui ribbon label" href="/#/atl-alt-content">{{answer.altContent.where}}</a> -->
-  <span class="ui ribbon label">{{answer.altContent.where || answer.title}}</span>
-  <h2 class="header">{{answer.question}}</h2>
+  <span class="ui ribbon label" ng-hide="!answer.altContent.where">{{ answer.altContent.where }}</span>
+  <h3 class="ui huge header">{{ answer.title }}</h3>
+
+  <h2 class="ui header">
+    <i class="comment icon ui avatar"></i>
+    <div class="content"> {{ answer.question }} </div>
+  </h2>
   <md class="content" ng-model="answer.content">MD CONTENT HERE</md>
 </div>

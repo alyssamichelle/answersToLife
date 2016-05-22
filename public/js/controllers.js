@@ -5,7 +5,6 @@ angular.module('answersToLife')
 // Multiple Answers Controller
   Answers.success(function(data){
     $scope.answers = data;
-    console.log(data);
   });
 
 })
@@ -21,7 +20,6 @@ angular.module('answersToLife')
     Answers.success(function(data){
       $scope.answers = data;
       $scope.answer = $scope.answers[$routeParams.id];
-
     });
   };
 

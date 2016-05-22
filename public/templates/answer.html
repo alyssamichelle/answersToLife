@@ -6,5 +6,9 @@
     <i class="comment icon ui avatar"></i>
     <div class="content"> {{ answer.question }} </div>
   </h2>
-  <md class="content" ng-model="answer.content">MD CONTENT HERE</md>
+  <div class="ui red raised segment">
+    <span class="ui black ribbon label" ng-hide="!answer.altContent.where">{{ answer.altContent.where }}</span>
+
+    <md class="content" ng-model="answer.content">MD CONTENT HERE</md>
+  </div>
 </div>

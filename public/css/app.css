@@ -1,4 +1,4 @@
-@import url(../js/vendor/semantic_ui/semantic.css);
+@import url(../vendor/semantic_ui/semantic.css);
 
 @-webkit-keyframes wiggle-it {
   0% {
@@ -35,7 +35,7 @@
     color: #3C3C3C;
   }
   100% {
-    color: #92539E;
+    color: #DB2828;
   }
 }
 
@@ -44,7 +44,7 @@
     color: #3C3C3C;
   }
   100% {
-    color: #92539E;
+    color: #DB2828;
   }
 }
 
